@@ -1,4 +1,4 @@
-# Stock Management System (SGE)
+# Stock Management System (SMS)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Django](https://img.shields.io/badge/Django-5.0.1-green.svg)
