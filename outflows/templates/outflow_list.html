@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-SGE - Saídas
+SMS - Outflows
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@ SGE - Saídas
   <div class="col-md-6">
     <form method="get" action="{% url 'outflow_list' %}">
       <div class="input-group">
-        <input type="text" class="form-control" name="product" placeholder="Produto" value="{{ request.GET.product }}">
+        <input type="text" class="form-control" name="product" placeholder="Product" value="{{ request.GET.product }}">
         <button type="submit" class="btn btn-primary">
           <i class="bi bi-search"></i>
         </button>
@@ -26,7 +26,7 @@ SGE - Saídas
   {% if perms.outflows.add_outflow %}
   <div class="col-md-6">
     <a href="{% url 'outflow_create' %}" class="btn btn-success float-end">
-      <i class="bi bi-plus"></i> Nova Saída
+      <i class="bi bi-plus"></i> New Outflow
     </a>
   </div>
   {% endif %}
@@ -37,11 +37,11 @@ SGE - Saídas
     <thead class="thead-dark">
       <tr>
         <th>ID</th>
-        <th>Produto</th>
-        <th>Fornecedor</th>
-        <th>Quantidade</th>
-        <th>Data de entrada</th>
-        <th>Ações</th>
+        <th>Product</th>
+        <th>Supplier</th>
+        <th>Quantity</th>
+        <th>Created Date</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>

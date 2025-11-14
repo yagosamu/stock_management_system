@@ -1,6 +1,57 @@
-venv
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Database
 db.sqlite3
-media
+db.sqlite3-journal
+*.sqlite3
+
+# Media files
+media/
+
+# Python
 __pycache__/
-.DS_Store
+*.py[cod]
+*$py.class
+*.so
+
+# Django
+*.log
+local_settings.py
+staticfiles/
+static/
+
+# Environment variables
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Custom scripts (development only)
+create_sample_data.py
+create_inflows_outflows.py
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Temporary files
+*.tmp
+*.bak

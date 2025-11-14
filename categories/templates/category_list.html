@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-SGE - Categorias
+SMS - Categories
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@ SGE - Categorias
   <div class="col-md-6">
     <form method="get" action="{% url 'category_list' %}">
       <div class="input-group">
-        <input type="text" class="form-control" name="name" placeholder="Nome" value="{{ request.GET.name }}">
+        <input type="text" class="form-control" name="name" placeholder="Name" value="{{ request.GET.name }}">
         <button type="submit" class="btn btn-primary">
           <i class="bi bi-search"></i>
         </button>
@@ -20,7 +20,7 @@ SGE - Categorias
   {% if perms.categories.add_category %}
   <div class="col-md-6">
     <a href="{% url 'category_create' %}" class="btn btn-success float-end">
-      <i class="bi bi-plus"></i> Nova Categoria
+      <i class="bi bi-plus"></i> New Category
     </a>
   </div>
   {% endif %}
@@ -31,9 +31,9 @@ SGE - Categorias
     <thead class="thead-dark">
       <tr>
         <th>ID</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Ações</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>

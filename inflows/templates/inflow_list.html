@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-SGE - Entradas
+SMS - Inflows
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@ SGE - Entradas
   <div class="col-md-6">
     <form method="get" action="{% url 'inflow_list' %}">
       <div class="input-group">
-        <input type="text" class="form-control" name="product" placeholder="Produto" value="{{ request.GET.product }}">
+        <input type="text" class="form-control" name="product" placeholder="Product" value="{{ request.GET.product }}">
         <button type="submit" class="btn btn-primary">
           <i class="bi bi-search"></i>
         </button>
@@ -20,7 +20,7 @@ SGE - Entradas
   {% if perms.inflows.add_inflow %}
   <div class="col-md-6">
     <a href="{% url 'inflow_create' %}" class="btn btn-success float-end">
-      <i class="bi bi-plus"></i> Nova Entrada
+      <i class="bi bi-plus"></i> New Inflow
     </a>
   </div>
   {% endif %}
@@ -31,11 +31,11 @@ SGE - Entradas
     <thead class="thead-dark">
       <tr>
         <th>ID</th>
-        <th>Produto</th>
-        <th>Fornecedor</th>
-        <th>Quantidade</th>
-        <th>Data de entrada</th>
-        <th>Ações</th>
+        <th>Product</th>
+        <th>Supplier</th>
+        <th>Quantity</th>
+        <th>Inflow Date</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
